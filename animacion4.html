@@ -1,0 +1,82 @@
+<html> 
+<head>
+    <title>ANIMACION 3 CSS</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .contenedor{
+            width: 400px;
+            height: 200px;
+            border: 1px solid black;
+            position: relative;/* para entrar el div */
+            margin: 0 auto;/* para centrar el div */
+
+            overflow: hidden;/* muestra solo lo interior */
+        }
+        .cuadrito{
+            width: 100px;
+            height: 100px;
+
+            position: absolute;/* permite mover el div dentro del contenedor */
+
+            top: 50px;
+            left: -50px;
+
+            animation: cuadrito 2.5s infinite linear;
+        }
+        .rectangulo{
+            width: 100%;
+            height: 35%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+           
+        }
+        .rectangulo img{
+            width: 100%;
+            height: 100%;
+            }
+        .cielo{
+            width: 100%;
+            height: 65%;
+            position: absolute;
+            top: 0;
+            left: 0;
+           
+        }
+        .cielo img{
+            width: 100%;
+            height: 100%;
+            }
+        @keyframes cuadrito{
+            from{
+                left: -100px;
+            }
+            to{
+                left: 500px;
+            }
+        }
+        .cuadrito img{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="rectangulo">
+            <img src="img/pasto.png">
+        </div>
+        <div class="cielo">
+            <img src="img/cielo.png">
+        </div>
+
+        <div class="cuadrito">
+            <img src="img/MEGAMAN.gif" alt="">
+        </div>
+
+    </div>
+</body>
+</html>
